@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2021_03_17_024711) do
     t.string "title"
     t.boolean "favorite"
     t.string "url"
+    t.string "public_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["photo_album_id"], name: "index_photos_on_photo_album_id"

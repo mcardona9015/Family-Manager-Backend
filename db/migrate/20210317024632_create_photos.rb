@@ -5,6 +5,7 @@ class CreatePhotos < ActiveRecord::Migration[6.1]
       t.string :title
       t.boolean :favorite
       t.string :url
+      t.string :public_id
 
       t.timestamps
     end
