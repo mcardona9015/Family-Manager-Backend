@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
 
   post "/photo", to: "photos#create"
-  get "/photo", to: "photo#index"
+  get "/photo", to: "photos#index"
 
 
 end
