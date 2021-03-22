@@ -11,6 +11,13 @@ class PhotosController < ApplicationController
         render json: photos
     end
 
+    def update
+        # byebug
+        photo = Photo.find(params[:id])
+        photo.update(params.require(:photo).permit(:favorite))
+        render json: photo
+    end
+
     private
 
     # def photo_params(*args)
