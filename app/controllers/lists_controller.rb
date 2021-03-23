@@ -10,6 +10,11 @@ class ListsController < ApplicationController
         render json: lists
     end
 
+    def destroy
+        list = List.find(params[:id])
+        list.destroy
+    end
+
     def update
         # byebug
         list = List.find(params[:id])
