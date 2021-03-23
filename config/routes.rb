@@ -16,8 +16,11 @@ Rails.application.routes.draw do
 
   get "/list", to: "lists#index"
   post "/list", to: "lists#create"
+  patch "/list/:id", to: "lists#update"
 
   post "/listItem", to: "lists#create_list_item"
+  delete "/listItem/:id", to: "lists#delete_list_item"
+  patch "listItem/:id", to: "lists#update_list_item"
 
 
 end

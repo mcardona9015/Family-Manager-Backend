@@ -10,9 +10,27 @@ class ListsController < ApplicationController
         render json: lists
     end
 
+    def update
+        # byebug
+        list = List.find(params[:id])
+        list.update(params.require(:list).permit(:title))
+        render json: list
+    end
+
     def create_list_item
         # byebug
         list_item = ListItem.create(params.require(:list).permit(:list_id, :content, :complete))
+        render json: list_item
+    end
+
+    def delete_list_item
+        ListItem.find_by(params.permit(:id)).destroy
+    end
+
+    def update_list_item
+        # byebug
+        list_item = ListItem.find(params[:id])
+        list_item.update(params.require(:list).permit(:content, :complete))
         render json: list_item
     end
     
