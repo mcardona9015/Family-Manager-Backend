@@ -2,6 +2,7 @@ class User < ApplicationRecord
     has_many :photo_albums
     has_many :photos, through: :photo_albums
     has_many :calendars
+    has_many :lists
 
     validates :username, uniqueness: {case_sensitive: false}, presence: true
     # validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
