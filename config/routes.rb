@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post "/photo", to: "photos#create"
   get "/photo", to: "photos#index"
   patch "/photo/:id", to: "photos#update"
+  delete "/photo/:id", to: "photos#destroy"
 
   post "/calendar", to: "calendars#create"
   get "/calendar", to: "calendars#index"
