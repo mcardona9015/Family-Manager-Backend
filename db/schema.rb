@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_03_22_203640) do
   create_table "list_items", force: :cascade do |t|
     t.bigint "list_id", null: false
     t.string "content"
-    t.boolean "complete"
+    t.boolean "complete", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["list_id"], name: "index_list_items_on_list_id"
